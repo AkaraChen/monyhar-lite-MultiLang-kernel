@@ -1,10 +1,8 @@
 import os
-from typing import Any
-
+import re
+import urllib
 import requests
-
-import HtmlDownloader
-import UrlManager
+from typing import Any
 
 # U know the rules,
 
@@ -19,18 +17,21 @@ if if_proxy == "Y":
 
     proxies: dict[str, Any] = {"http": http_proxy, "https": https_proxy}
     if_test = input("Test the proxy server?[Y/n]")
-    if if_test == "Y":
-        ping_http_proxy = "ping" + http_proxy
-        ping_https_proxy = "ping" + https_proxy
-        ping_result = os.system("ping " + http_proxy)
-        if "Lost = 0" in ping_result:
-            print("Connected to the http proxy server.")
-        ping_result = os.system("ping " + https_proxy)
-        if "Lost = 0" in ping_result:
-            print("Connected to the https proxy server.")
+    try:
+        if if_test == "Y":
+            ping_http_proxy = "ping" + http_proxy
+            ping_https_proxy = "ping" + https_proxy
+            ping_result = os.system("ping " + http_proxy)
+            if "Lost = 0" in ping_result:
+                print("Connected to the http proxy server.")
+                ping_result = os.system("ping " + https_proxy)
+            if "Lost = 0" in ping_result:
+                print("Connected to the https proxy server.")
 
-else:
-    print("No proxy server was set.")
+        else:
+            print("No proxy server was set.")
+    except:
+        print("Did you set the proxy server?")
 
 
 class Monyhar:
@@ -53,9 +54,14 @@ class Monyhar:
     def detection(self):
         print(self)
 
-    def save_html(self,HTML_Page):
+    def get_html(self):
+        html = urllib.request.urlopen(self).read()
+        return html
+
+    def save_html(file_Name, file_content):
         #    注意windows文件命名的禁用符，比如 /
-        with open(self.replace('/', '_') + ".html", "wb") as f:
+        file_Name = re.sub('[\/:*?"<>|]','_', file_Name)
+        with open(file_Name + ".html", "wb") as f:
             #   写文件用bytes而不是str，所以要转码
             f.write(file_content)
             f.close()
@@ -65,17 +71,14 @@ global url
 url = input("url:")
 old_url = url
 
-if "www." not in url:
-    url = "www." + url
-print("Auto inserted 'www.")
-if "http://" not in url:
+if re.search("http://", url) is None:
     url = "http://" + url
-print("Auto inserted 'http://'.")
 
-print(Monyhar.surf_internet(url))
-html = Monyhar.surf_internet(url)
+cache = Monyhar.surf_internet(url)
+print(cache)
+html = cache
 
 if input("Help-About?[Y/n]") == "Y":
     Monyhar.about()
 if input("Do you want to download the page?[Y/n]") == "Y":
-    Monyhar.save_html(old_url, html, url)
+    Monyhar.save_html(old_url, Monyhar.get_html(url))
