@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace C_
 {
@@ -10,16 +11,26 @@ namespace C_
         {
             //C# WebRequest方法默认使用系统配置代理
 
-            string url = Console.ReadLine();
+            Console.WriteLine("Welcome to Monyhar Browser");
+            Console.Write("url:");
+            string url = Console.ReadLine().Trim();
             string old_url = url;
-            if (!url.StartsWith("www.")) url = "www." + url;
-            Console.WriteLine("Auto inserted 'www.");
-            if (!url.StartsWith("http://")) url = "https://" + url;
+            if (Regex.IsMatch(url,"^(http://|https://)[\\w\\W]*")) url = "http://" + url;
             Console.WriteLine("Auto inserted 'http://'.");
 
             Monyhar internet = new Monyhar(url);
             internet.surf_internet();
-            Console.WriteLine(internet.html);
+            
+            if(internet.forMonyhar){
+                Console.WriteLine("您好，您访问的页面已经适配了 Monyhar！");
+                Console.WriteLine(internet.mstl);
+                Console.WriteLine("您是否要查看该网页对西方内核的兼容版本？ [Y/n]");
+                if(Console.ReadLine()=="Y")
+                Console.WriteLine(internet.html);
+            }
+            else{
+                Console.WriteLine(internet.html);
+            }
 
             Console.WriteLine("Help-About?[Y/n]");
             if (Console.ReadLine() == "Y")
@@ -33,6 +44,8 @@ namespace C_
     {
         public string url { get; private set; }
         public string html { get; private set; }
+        public string mstl { get; private set; }
+        public bool forMonyhar {get; private set;} = false;
         public Monyhar(string url)
         {
             this.url = url;
@@ -47,6 +60,16 @@ namespace C_
             sr.Close();
             stream.Close();
             wres.Close();
+
+            Regex Rmstl = new Regex("<!--harmony[\\s\\S]*-->");
+            Regex RmstlHead = new Regex("^<!--harmony");
+            Regex RmstlTail = new Regex("-->$");
+            if(Rmstl.IsMatch(html)){
+                forMonyhar = true;
+                foreach(var mstl in Rmstl.Matches(html)){
+                    this.mstl += RmstlTail.Replace(RmstlHead.Replace(mstl.ToString(),"").ToString(),"")+Environment.NewLine;
+                }
+            }
         }
         public string about()
         {

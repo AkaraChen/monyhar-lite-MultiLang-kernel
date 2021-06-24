@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="UTF-8">
+		<script>
+			function surf_internet(){
+				document.getElementById("Monyhar").src = document.getElementById("Monyhar_url").value;
+			}
+		</script>
+	</head>
+	<body>
+        <input id="Monyhar_url" style="width: calc(100% - 100px);" value="https://www.baidu.com"/><button onclick="surf_internet()">Go!</button>
+        <iframe id="Monyhar" style="width: 100%;height: 700px;"></iframe>
+	</body>
+</html>
