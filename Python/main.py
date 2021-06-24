@@ -31,7 +31,7 @@ if if_proxy == "Y":
         else:
             print("No proxy server was set.")
     except:
-        print("Did you set the proxy server?")
+        print("Have you set all the proxy server?")
 
 
 class Monyhar:
@@ -58,16 +58,15 @@ class Monyhar:
         html = urllib.request.urlopen(self).read()
         return html
 
-    def save_html(file_Name, file_content):
+    def save_html(self, file_content):
         #    注意windows文件命名的禁用符，比如 /
-        file_Name = re.sub('[\/:*?"<>|]','_', file_Name)
-        with open(file_Name + ".html", "wb") as f:
+        self = re.sub('[\/:*?"<>|]','_', self)
+        with open(self + ".html", "wb") as f:
             #   写文件用bytes而不是str，所以要转码
             f.write(file_content)
             f.close()
 
 
-global url
 url = input("url:")
 old_url = url
 
