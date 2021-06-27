@@ -1,4 +1,5 @@
 # Monyhar-lite
+# Telegram | Devlopers:https://t.me/joinchat/Vc0SCDoduNo1NDQ1
 # QQ Group：216578013
 【Monyhar-MultiLang开发讨论】：https://jq.qq.com/?_wv=1027&k=nNUaIR3c
 ![avatar](https://raw.githubusercontent.com/tucaoba2333/monyhar-lite-MultiLang-kernel/monyhar/release/assests/qrcode_1623936172992.jpg)
