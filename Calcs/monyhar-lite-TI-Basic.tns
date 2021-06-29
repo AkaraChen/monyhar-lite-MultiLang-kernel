@@ -1,0 +1,9 @@
+Define main()=
+Prgm
+    surf_internet()
+EndPrgm
+
+Define surf_internet()=
+Func
+    Return 0
+EndFunc
