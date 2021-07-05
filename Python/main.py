@@ -42,8 +42,8 @@ if if_proxy == "Y":
             else:
                 print("No proxy server was set.")
     except:
-        print('\033[1;31;40m')  # 下一目标输出背景为黑色，颜色红色高亮显示
-        print('[Warning]Have you set all the proxy server?')  # 字体颜色红色反白处理
+        print('\033[1;31;40m')
+        print('[Warning]Have you set all the proxy server?')
         print('\033[0m')
 
 
@@ -96,9 +96,9 @@ if if_https == "Y":
         print(cache)
         html = cache
     except:
-        print('\033[1;31;40m')  # 下一目标输出背景为黑色，颜色红色高亮显示
+        print('\033[1;31;40m')
         print("\033[7;31m[ERROR] Failed to connect to the server with HTTPS/SSL connection.\033[1;31;40m")
-        print('\030[WARNING] Your connection to this site is not secure.\033[1;31;40m')  # 字体颜色红色反白处理
+        print('\030[WARNING] Your connection to this site is not secure.\033[1;31;40m')
         print('\033[0m')
         print("[Info] Do you want to visit anyway?[Yes/n]")
         if_visit = input()
