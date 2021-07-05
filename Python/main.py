@@ -15,41 +15,41 @@ from typing import Any
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) '
                          'Chrome/51.0.2704.63 Safari/537.36'}
 
-if_proxy = input("Do you want to set proxy server?[Y/n]")
+if_proxy = input("Do you want to set proxy server?[Y/n] ")
 
 if if_proxy == "Y":
-    if_localhost = input("Localhost?[Y/n]")
+    if_localhost = input("Localhost?[Y/n] ")
     if if_localhost == "Y":
-        http_port = input("HTTP PROXY PORT:")
+        http_port = input("HTTP PROXY PORT: ")
         http_proxy = "localhost:" + http_port
-        https_port = input("HTTPS PROXY PORT:")
+        https_port = input("HTTPS PROXY PORT: ")
         https_proxy = "localhost:" + https_port
     else:
-        http_proxy = input("Type http proxy address here.")
-        https_proxy = input("Type https proxy address here.")
+        http_proxy = input("Type http proxy address here. ")
+        https_proxy = input("Type https proxy address here. ")
     proxies: dict[str, Any] = {"http": http_proxy, "https": https_proxy}
-    if_test = input("Test the proxy server?[Y/n]")
+    if_test = input("Test the proxy server?[Y/n] ")
     try:
         if if_test == "Y":
             ping_http_proxy = "ping"
             ping_https_proxy = "ping"
             ping_result = os.system("ping")
             if "Lost = 0" in ping_result:
-                print("Connected to the http proxy server.")
+                print("Connected to the http proxy server. ")
                 ping_result = os.system("ping")
             if "Lost = 0" in ping_result:
-                print("Connected to the https proxy server.")
+                print("Connected to the https proxy server. ")
             else:
-                print("No proxy server was set.")
+                print("No proxy server was set. ")
     except:
         print('\033[1;31;40m')
-        print('[Warning]Have you set all the proxy server?')
+        print('[Warning]Have you set all the proxy server? ')
         print('\033[0m')
 
 
 class Monyhar:
     def __init__(self):
-        print("Welcome to Monyhar Browser")
+        print("Welcome to Monyhar Browser ")
 
     def surf_internet(self):
         html = requests.get(self)
@@ -60,10 +60,10 @@ class Monyhar:
 
     @staticmethod
     def about():
-        print("[Info]Monyhar Browser,made by tucaoba233.")
-        print("[Info]©CopyRight 2021-2021 tucaoba233, All Rights Reserved.")
-        print("[Info]This project follow GPL-3.0 License")
-        print("[Info]For more,please visit https://github.com/tucaoba2333/monyhar-lite-MultiLang-kernel")
+        print("[Info]Monyhar Browser, made by tucaoba233. ")
+        print("[Info]©CopyRight 2021-2021 tucaoba233, All Rights Reserved. ")
+        print("[Info]This project follow GPL-3.0 License ")
+        print("[Info]For more,please visit https://github.com/tucaoba2333/monyhar-lite-MultiLang-kernel ")
 
     def detection(self):
         print(self)
