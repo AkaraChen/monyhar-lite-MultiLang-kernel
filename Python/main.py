@@ -3,6 +3,7 @@ import re
 import urllib
 import requests
 import ssl
+import outputer
 
 ssl._create_default_https_context = ssl._create_stdlib_context
 
@@ -20,26 +21,26 @@ if if_proxy == "Y":
     if_localhost = input("Localhost?[Y/n]")
     if if_localhost == "Y":
         http_port = input("HTTP PROXY PORT:")
-        http_proxy = "localhost" + http_port
+        http_proxy = "localhost:" + http_port
         https_port = input("HTTPS PROXY PORT:")
-        https_proxy = "localhost" + https_port
+        https_proxy = "localhost:" + https_port
     else:
         http_proxy = input("Type http proxy address here.")
         https_proxy = input("Type https proxy address here.")
-        proxies: dict[str, Any] = {"http": http_proxy, "https": https_proxy}
+    proxies: dict[str, Any] = {"http": http_proxy, "https": https_proxy}
     if_test = input("Test the proxy server?[Y/n]")
     try:
         if if_test == "Y":
-            ping_http_proxy = "ping" + http_proxy
-            ping_https_proxy = "ping" + https_proxy
-            ping_result = os.system("ping " + http_proxy)
+            ping_http_proxy = "ping"
+            ping_https_proxy = "ping"
+            ping_result = os.system("ping")
             if "Lost = 0" in ping_result:
                 print("Connected to the http proxy server.")
-                ping_result = os.system("ping " + https_proxy)
+                ping_result = os.system("ping")
             if "Lost = 0" in ping_result:
                 print("Connected to the https proxy server.")
             else:
-               print("No proxy server was set.")
+                print("No proxy server was set.")
     except:
         print('\033[1;31;40m')  # 下一目标输出背景为黑色，颜色红色高亮显示
         print('[Warning]Have you set all the proxy server?')  # 字体颜色红色反白处理
@@ -62,6 +63,7 @@ class Monyhar:
         print("[Info]Monyhar Browser,made by tucaoba233.")
         print("[Info]©CopyRight 2021-2021 tucaoba233, All Rights Reserved.")
         print("[Info]This project follow GPL-3.0 License")
+        print("[Info]For more,please visit https://github.com/tucaoba2333/monyhar-lite-MultiLang-kernel")
 
     def detection(self):
         print(self)
@@ -82,11 +84,12 @@ class Monyhar:
 url = input("url:   example: https://www.google.com |")
 old_url = url
 
-#if re.search("http://", url) is None:
+# if re.search("http://", url) is None:
 #    url = "http://" + url
 if_https = input("Try to connect with https?[Y/n]")
 if if_https == "Y":
     try:
+        print(outputer.UseStyle('Loading......', mode='blink'))
         req = urllib.request.Request(url=url, headers=headers)
         res = urllib.request.urlopen(req)
         cache = res.read()
@@ -108,6 +111,8 @@ if if_https == "Y":
 else:
     print('\033[1;31;40m')  # 下一目标输出背景为黑色，颜色红色高亮显示
     print('\030[7;31m[WARNING] Your connection to this site is not secure.\033[1;31;40m')  # 字体颜色红色反白处理
+    print('\030[7;31m[WARNING] Connecting to a site without HTTPS/SSL May cant show normally,if you got trouble in '
+          'visiting a stie,try https.\033[1;31;40m')
     print('\033[0m')
     cache = Monyhar.surf_internet(url)
     print(cache)
