@@ -1,3 +1,6 @@
+import * from python
+# 我们目前为了兼容现有的 Python 生态勉强采用了一些来自 Python 的库，以后将逐步掏空替换。
+
 func 网上冲浪(){
     return 0
 }
