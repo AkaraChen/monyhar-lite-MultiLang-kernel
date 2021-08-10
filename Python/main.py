@@ -103,16 +103,19 @@ if if_https == "Y":
         print("[Info] Do you want to visit anyway?[Yes/n]")
         if_visit = input()
         if if_visit == "Yes":
-            cache = Monyhar.surf_internet(url)
-            print(cache)
-            html = cache
+            try:
+                cache = Monyhar.surf_internet(url)
+                print(cache)
+                html = cache
+            except:
+                print("Failed.")
         else:
             print("[Info] User cancelled the connection.")
 else:
     print('\033[1;31;40m')  # 下一目标输出背景为黑色，颜色红色高亮显示
     print('\030[7;31m[WARNING] Your connection to this site is not secure.\033[1;31;40m')  # 字体颜色红色反白处理
     print('\030[7;31m[WARNING] Connecting to a site without HTTPS/SSL May cant show normally,if you got trouble in '
-          'visiting a stie,try https.\033[1;31;40m')
+          'visiting a site,try https.\033[1;31;40m')
     print('\033[0m')
     cache = Monyhar.surf_internet(url)
     print(cache)
