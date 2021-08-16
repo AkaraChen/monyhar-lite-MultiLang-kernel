@@ -125,8 +125,8 @@ if input("Help-About?[Y/n]") == "Y":
     Monyhar.about()
 if input("Do you want to download the page?[Y/n]") == "Y":
     Monyhar.save_html(old_url, Monyhar.get_html(url))
-#           /|   +-----
+#           /|   +-------
 #    |       |   |
-# ---+---    |   +----+
-#    |       |        |
-#           -+-  -----+
+# ---+---    |   +------+
+#    |       |          |
+#           -+-  -------+
