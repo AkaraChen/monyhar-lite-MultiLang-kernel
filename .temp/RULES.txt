@@ -1,0 +1,65 @@
+***要真实，参军去
+***Be real and exciting
+***本次活动严禁空降
+*** After joining, participation is prohibited when game is in progress
+***使用的设备均为不危害生命财产安全的SD发射器
+***All guns use water bullet and are harmless to persons and property
+***请佩戴护目镜参与活动
+***Goggles are required
+***请注意前往活动路途中的个人防护
+***Please Pay attention to personal safety against the epidemic
+***抵达活动场地后请配合核验身份
+***Verification of identity on arrival
+
+PA 人质模式
+PA Hostages mode
+一、场上势力分为t阵营、ct阵营、人质。
+1. The forces on the station are T, CT and Hostages
+   t阵营的目的是劫持人质、迫使ct谈判或全歼ct或坚持满30分钟。
+   T’s role is to abduct hostages, CT’s role is to negotiate or take out all Ts or hold the position for 30mins.
+   ct阵营的目的是营救所有人质或全歼t。
+   CT is to rescue all hostages or take out all the Ts.
+   人质的目的是存活。
+   Hostages must survive.
+   所有势力均可使用武器；人质初始不得持有武器，但可拾取任意阵亡者的武器。
+   All teams are allowed to use weapons, hostages cannot hold weapons when spawn, but can pick up any weapons form killed. 
+二、编制和通讯
+2. Preparation and communication
+   ct人数为t的1.5倍左右，双方队长、编制、配置由双方现场自行决定；人质数量随机，由t阵营出人并自行决定数量，允许有伪人质的存在。
+   CT’s formation is T’s 1.5 times, the leader, distribute are On-site self-determination, The hostages are located at T’s base and the number of hostages are random, fake hostages are allowed.
+   允许使用各种合法通讯手段。
+   Legal means of communication are permitted.
+   每个势力的小队都必须配备至少一台UHF手台，公共通讯频率438.500MHz，备用通讯频率为435.000MHz，对内通讯频率在活动开始前自行决定。
+Every team has to load out at least one UHF interphone, Public communication frequency is 438.500MHZ, spare communication frequency is 435.000MHz, the frequency within teams are decided before the match begins
+   双方阵营的所有编制、战术及携带的装备、物资、补给等在不违反规则的情况下自行决定。
+   Both sides preparation, tactics, equipment and supplies, are discretionary but must not violate the rules of conduct.
+三、阶段
+3.Stages
+   每场分为准备阶段、对峙阶段、交战阶段、结束阶段；总时长设定为30分钟。
+   Every round is divided into preparing, confrontation, warring, finishing. Total time is 30mins.
+   准备阶段，双方在F6建筑集结后经E8小路前往G9建筑群，t阵营在横坐标F-J、纵坐标8-9的建筑内确认人质人选并布置防御，ct在G7处集结攻坚。
+  While preparing, both sides will gather in F6 building, They should go to G9 building through E8 path, T confirms the hostages and lay out defensive measures in building [F,J],[8,9]. CT will gather at G7 before storming T’s fortifications.
+   双方布置完成后进入对峙阶段。在这一阶段，双方象征性通过公共频率喊话。
+   Entering the standoff stage after both sides finishing the layout. In this stage, both sides symbolic shouting through public frequency.
+
+   对峙过程中，任意一方先开火或宣布谈判破裂则进入交战阶段。在这一阶段所有开火都被允许，t阵营防御ct进攻并挟持人质，ct阵营攻入建筑并营救人质，人质逃脱t阵营追捕并逃往ct阵营（第一个被营救的人质应告知ct阵营真实人质数量，伪人质可以谎报），伪人质通过伪装混入ct阵营造成混乱；t阵营可以劫持人质至G9处高层主楼，在保证生命财产安全的前提下前提布置楼内设施，允许在没有更好选择的情况下撕票。
+   While in confrontation, if any side fires in advance or announce the negotiation was failed, then warring stage will begin. During this stage, firing is allowed, T will try to prevent CT from rescuing the hostages, CT will charge into the building to try and rescue the hostages, hostages can flee the building and go to CT(Once rescued, the hostage is supposed to tell the CT the number of hostages being held by T, however fake hostages are allowed to lie)
+
+   如一方被全歼、人质死亡、人质被全数营救、开局满30分钟则进入结束阶段，各方应相互告知游戏结束，所有参与者返回F6集结点准备下一场次游戏。
+   If one side is eliminated, or any hostages died or were all rescued, started for 30mins, will enter the finishing phase, both sides are obliged to tell each other the game has ended, all participants are then to report back to F6 and prepare for the next round.
+ 
+四、活动过程注意事项
+4.ATTENTION
+   游戏允许近战击杀（推荐使用指杀，即在近距离不开枪而是用手指指一下对方达到击杀），但动作不能过激，更不得危害生命财产安全。
+   Game allows melee kills (Recommend finger-kill, meaning no shooting from afar is allowed, instead of point enemy to kill), but the action can’t be excessive endangering the safety of others and property.
+   人员被死亡后必须立即高举双手表明阵亡、退出当场此游戏，并返回F6集结点。
+   After one has been killed, that person must raise his hands to signal to others he has been killed and then he must exit the game and return to F6.
+   阵亡人员不能以任何方式参与游戏（包括但不限于和活人进行任何方式的通讯、在有存活人员在场的情况下和死亡人员讨论战局、射击）。
+   Those who have been killed can ‘t join the game in anyway (Including but not limited to communication with people anyway, talking about the game with others when active participants are present.)
+   在任何情况下如遇不适请立即与周围参与者联系，有通讯能力的应当立即通过公共频率报告情况，其他参与者应根据情况判断是否前往帮助或原地等待。
+   If feeling unwell for any reason, please communicate with surrounding participants immediately. If possible, communicate through public frequency to inform other participants and request for assistance if needed.
+   建筑群内可能有安保人员活动，如不幸被发现请全力配合对方工作并立即通过公共频率报告情况；如对方提出付费要求请尝试降低价格并先行垫付，所有当时在场的参与者稍后应平摊费用并补偿垫付的参与者。
+   There may be some security personnel activities in building, if found unfortunately, fully cooperate with each other's work and report the situation through the public frequency. If payment requirements are proposed, try to bargain and pay in advance, all participants are supposed to amortize cost later and compensate that participant who paid in advance.
+
+祝 活动愉快！
+GL&HF!
