@@ -1,17 +1,28 @@
 import os
 import re
+import time
 import urllib
 import requests
 import ssl
+from id_validator import validator
 import outputer
 
 ssl._create_default_https_context = ssl._create_stdlib_context
 
 from typing import Any
 
+from datetime import datetime
 # U know the rules,
 
 # And so do I~
+IDCard = input("根据相关法律法规对未成年人防止沉迷的要求，请输入您的身份证号：| According to Related Laws that request to stop minors being "
+               "addicted, please input you ID:")
+if not validator.is_valid(IDCard):
+    if not (datetime.today().weekday == 5 or 6 or 7) and (time.strftime("%H", time.localtime()) == 8):
+    print("系统检测到您是未成年人，将退出软件。")
+    exit()
+else:
+    print("通过验证！")
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) '
                          'Chrome/51.0.2704.63 Safari/537.36'}
 

@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: id-validator
+Version: 1.0.20
+Summary: Chinese Mainland Personal ID Card Validation
+Home-page: https://github.com/jxlwqq/id-validator.py
+Author: jxlwqq
+Author-email: jxlwqq@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+License-File: LICENSE
+
+UNKNOWN
+
