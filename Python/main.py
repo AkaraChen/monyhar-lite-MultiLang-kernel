@@ -15,14 +15,14 @@ from datetime import datetime
 # U know the rules,
 
 # And so do I~
-IDCard = input("根据相关法律法规对未成年人防止沉迷的要求，请输入您的身份证号：| According to Related Laws that request to stop minors being "
+IDCard = input("\u6839\u636e\u76f8\u5173\u6cd5\u5f8b\u6cd5\u89c4\u5bf9\u672a\u6210\u5e74\u4eba\u9632\u6b62\u6c89\u8ff7\u7684\u8981\u6c42\uff0c\u8bf7\u8f93\u5165\u60a8\u7684\u8eab\u4efd\u8bc1\u53f7\uff1a | According to Related Laws that request to stop minors being "
                "addicted, please input you ID:")
 if not validator.is_valid(IDCard):
     if not (datetime.today().weekday == 5 or 6 or 7) and (time.strftime("%H", time.localtime()) == 8):
-    print("系统检测到您是未成年人，将退出软件。")
+    print("\u7cfb\u7edf\u68c0\u6d4b\u5230\u60a8\u662f\u672a\u6210\u5e74\u4eba\uff0c\u5c06\u9000\u51fa\u8f6f\u4ef6\u3002")
     exit()
 else:
-    print("通过验证！")
+    print("\u901a\u8fc7\u9a8c\u8bc1\uff01")
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) '
                          'Chrome/51.0.2704.63 Safari/537.36'}
 
@@ -84,10 +84,9 @@ class Monyhar:
         return html
 
     def save_html(self, file_content):
-        #    注意windows文件命名的禁用符，比如 /
+        #Attention that some chars are not allowed in Windows like  \
         self = re.sub('[\/:*?"<>|]', '_', self)
         with open(self + ".html", "wb") as f:
-            #   写文件用bytes而不是str，所以要转码
             f.write(file_content)
             f.close()
 
@@ -136,8 +135,3 @@ if input("Help-About?[Y/n]") == "Y":
     Monyhar.about()
 if input("Do you want to download the page?[Y/n]") == "Y":
     Monyhar.save_html(old_url, Monyhar.get_html(url))
-#           /|   +-------
-#    |       |   |
-# ---+---    |   +------+
-#    |       |          |
-#           -+-  -------+

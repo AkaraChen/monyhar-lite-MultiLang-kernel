@@ -12,16 +12,16 @@ namespace C_
             //C# WebRequest方法默认使用系统配置代理
 
             Console.WriteLine("Welcome to Monyhar Browser");
-            Console.WriteLine("根据相关法律法规对未成年人防止沉迷的要求，请输入您的身份证号：");
+            Console.WriteLine("\u6839\u636e\u76f8\u5173\u6cd5\u5f8b\u6cd5\u89c4\u5bf9\u672a\u6210\u5e74\u4eba\u9632\u6b62\u6c89\u8ff7\u7684\u8981\u6c42\uff0c\u8bf7\u8f93\u5165\u60a8\u7684\u8eab\u4efd\u8bc1\u53f7\uff1a");
             string idnumber = Console.ReadLine();
             DateTime now = DateTime.Now;
             int nowDate = (now.Year-18)*10000+now.Month*100+now.Day;
             if((new Regex("\\d{18}")).IsMatch(idnumber)){
                 if(int.Parse(idnumber.Substring(6,8))< nowDate){
-                    Console.WriteLine("通过验证！");
+                    Console.WriteLine("\u901a\u8fc7\u9a8c\u8bc1\uff01");
                 }
                 else{
-                    Console.WriteLine("系统检测到您是未成年人，将退出软件。");
+                    Console.WriteLine("\u7cfb\u7edf\u68c0\u6d4b\u5230\u60a8\u662f\u672a\u6210\u5e74\u4eba\uff0c\u5c06\u9000\u51fa\u8f6f\u4ef6\u3002");
                     return;
                 }
             }
